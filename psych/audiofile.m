@@ -1,7 +1,7 @@
 1;
 
 function [wptr, wrect] = inicializa_display()
-    showStatusScreen = true;
+    showStatusScreen = false;
 
     whichScreen=max(Screen('Screens'));
     PsychImaging('PrepareConfiguration');
@@ -19,7 +19,7 @@ endfunction
 
 
 function toca_faixa(wptr, faixa)
-   debug = false;
+   debug = true;
   
    preSelectTime = 10; % unidade: 100uS (10 = 1 ms)
    triggerDuration = 10; % unidade 100uS (10 = 1 ms).
@@ -31,11 +31,13 @@ function toca_faixa(wptr, faixa)
    if debug
       DrawFormattedText(wptr,['Foi enviado trigger ',num2str(faixa)],'center','center');
       Screen('Flip', wptr);
+      WaitSecs(2);
    endif
 
 endfunction
 
-
-toca_faixa(inicializa_display(), 1);
-
+w = inicializa_display()
+toca_faixa(w, 1);
+KbWait();
 sca;
+
