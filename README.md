@@ -12,4 +12,5 @@ pelo monitor (Display++).
 - Para que o _psychtoolbox_ controle o Display++ corretamente, é necessário estar usando apenas o Display++ como monitor (desligar espelhamento ou monitores múltiplos).
 - Um atalho útil para fazer isso é <kbd>Super</kbd> + <kbd>p</kbd> 
 - No arquivo com a Playlist do Audiofile (que pode acessado montando-o como um disco externo), é necessário usar a opção `<Entry UseDigitalInputD0="TRUE"/>` para que ele seja controlado via Display++ corretamente.
+- O `octave` precisa ser executado como _root_.
 
